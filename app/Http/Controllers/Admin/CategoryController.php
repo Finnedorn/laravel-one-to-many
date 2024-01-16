@@ -39,6 +39,11 @@ class CategoryController extends Controller
     public function store(StoreCategoryRequest $request)
     {
         //
+        $formData = $request->validated();
+        $slug = Str::slug($formData['name'],'-');
+        $formData['slug'] = $slug;
+        $newCategory = Category::create($formData);
+        return redirect()->route('admin.categories.show', $newCategory->id);
     }
 
     /**
@@ -65,6 +70,11 @@ class CategoryController extends Controller
     public function update(UpdateCategoryRequest $request, Category $category)
     {
         //
+        $formData = $request->validated();
+        $slug = Str::slug($formData['name'],'-');
+        $formData['slug'] = $slug;
+        $category->update($formData);
+        return redirect()->route('admin.categories.show', $category->id);
     }
 
     /**
