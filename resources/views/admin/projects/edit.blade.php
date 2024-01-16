@@ -36,6 +36,21 @@
                         @enderror
                     </div>
 
+                    {{-- categoria --}}
+                    {{-- <label for="category_id" class="form-label">Categoria</label>
+                    <select
+                        class="form-control @error('category_id') is-invalid @enderror"
+                        id="category" name="category_id" required>
+                        <option value="">Seleziona la Categoria</option>
+                        @foreach ($categories as $category)
+                            <option value="{{$category->$category_id}}"></option>
+                        @endforeach
+                    </select> --}}
+                    {{-- {{old('category_id',$category->category_id) === $category->id ? 'selected': ''}} --}}
+                    {{-- @error('category_id')
+                        <div class="invalid-feedback">{{ $message }}</div>
+                    @enderror --}}
+
                     {{-- nome della repo --}}
                     <div class="mb-3">
                         <label for="repo_name" class="form-label">Nome della Repostory</label>

@@ -27,7 +27,9 @@ class StoreProjectRequest extends FormRequest
             'repo_name'=>['required', 'min:3', 'max:200', 'unique:projects'],
             'preview'=>['nullable', 'image', 'max:3072'],
             'repo_link'=>['required', 'url', 'unique:projects'],
-            'description'=>['nullable']
+            'description'=>['nullable'],
+            // dev'essere una delle categorie id disponibili della select
+            'category_id'=>['nullable', 'exists: categories,id']
         ];
     }
 

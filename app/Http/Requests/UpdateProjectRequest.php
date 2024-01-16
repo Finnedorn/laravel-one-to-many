@@ -28,7 +28,8 @@ class UpdateProjectRequest extends FormRequest
             'repo_name'=>['required', 'min:3', 'max:200', Rule::unique('projects')->ignore($this->project)],
             'preview'=>['nullable', 'image'],
             'repo_link'=>['required', 'url', Rule::unique('projects')->ignore($this->project)],
-            'description'=>['nullable']
+            'description'=>['nullable'],
+            'category_id'=>['nullable', 'exists: categories,id']
         ];
     }
 

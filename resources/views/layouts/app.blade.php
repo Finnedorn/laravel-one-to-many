@@ -51,15 +51,21 @@
                             </a> --}}
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'characters.index' ? 'active' : '' }}"
+                            <a class="nav-link {{ Route::currentRouteName() == 'home' ? 'active' : '' }}"
                                 href="{{ route('home') }}">
                                 {{ __('Home') }}
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link {{ Route::currentRouteName() == 'types.index' ? 'active' : '' }}"
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.projects.index' ? 'active' : '' }}"
                                 href="{{ route('admin.projects.index') }}">
-                                {{ __('Progetti') }}
+                                Progetti
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ Route::currentRouteName() == 'admin.categories.index' ? 'active' : '' }}"
+                                href="{{ route('admin.categories.index') }}">
+                                Categorie
                             </a>
                         </li>
                     </ul>

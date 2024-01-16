@@ -9,9 +9,9 @@ class Category extends Model
 {
     use HasFactory;
     // gli dico che cosa non deve salvare con guarded
-    protected $guarded = ['name'];
+    protected $fillable = ['name'];
 
     public function projects() {
-        return $this->hasMany(Project::class)
+        return $this->hasMany(Project::class);
     }
 }
