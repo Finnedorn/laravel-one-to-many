@@ -37,19 +37,19 @@
                     </div>
 
                     {{-- categoria --}}
-                    {{-- <label for="category_id" class="form-label">Categoria</label>
+                    <label for="category_id" class="form-label">Categoria</label>
                     <select
                         class="form-control @error('category_id') is-invalid @enderror"
                         id="category" name="category_id" required>
                         <option value="">Seleziona la Categoria</option>
                         @foreach ($categories as $category)
-                            <option value="{{$category->$category_id}}"></option>
+                            <option value="{{$category->id}}"{{old('category_id') == $category->id ? 'selected': ''}}>{{$category->name}}</option>
                         @endforeach
-                    </select> --}}
+                    </select>
                     {{-- {{old('category_id',$category->category_id) === $category->id ? 'selected': ''}} --}}
-                    {{-- @error('category_id')
+                    @error('category_id')
                         <div class="invalid-feedback">{{ $message }}</div>
-                    @enderror --}}
+                    @enderror
 
                     {{-- nome della repo --}}
                     <div class="mb-3">
