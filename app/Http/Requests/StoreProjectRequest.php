@@ -29,7 +29,7 @@ class StoreProjectRequest extends FormRequest
             'repo_link'=>['required', 'url', 'unique:projects'],
             'description'=>['nullable'],
             // dev'essere una delle categorie id disponibili della select
-            'category_id'=>['nullable', 'exists: categories,id']
+            'category_id'=>['nullable', 'exists:categories,id']
         ];
     }
 

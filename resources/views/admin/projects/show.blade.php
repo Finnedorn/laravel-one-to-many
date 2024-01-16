@@ -21,7 +21,7 @@
                             Nome Repository: {{$project->repo_name}}
                         </h4>
                         <h6>
-                            Categoria:
+                            Categoria: {{$project->category->name}}
                         </h6>
                         <h6>
                             Link alla Repository: {{$project->repo_link}}
