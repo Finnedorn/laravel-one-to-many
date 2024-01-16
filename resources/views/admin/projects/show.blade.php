@@ -21,6 +21,9 @@
                             Nome Repository: {{$project->repo_name}}
                         </h4>
                         <h6>
+                            Categoria:
+                        </h6>
+                        <h6>
                             Link alla Repository: {{$project->repo_link}}
                         </h6>
                         <p class="my-4">
