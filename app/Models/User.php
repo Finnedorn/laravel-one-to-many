@@ -42,4 +42,13 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    // imposto la relazione uno a molti
+    // prima in user creo la funzione projects
+    // plurale in quanto uno a molti e molti e projects
+    // hasmany(nomemodeltabelladimolti::class)
+    // ora mi sposto in model>project...
+    public function projects() {
+        return $this->hasMany(Project::class);
+    }
 }
