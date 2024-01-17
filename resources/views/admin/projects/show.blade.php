@@ -20,9 +20,11 @@
                         <h4>
                             Nome Repository: {{$project->repo_name}}
                         </h4>
+                        @if($project->category !== null)
                         <h6>
                             Categoria: {{$project->category->name}}
                         </h6>
+                        @endif
                         <h6>
                             Link alla Repository: {{$project->repo_link}}
                         </h6>

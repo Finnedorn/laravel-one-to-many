@@ -21,7 +21,7 @@
                 </div>
             </div>
 
-            <div class="card p-4 w-50">
+            <div class="card p-4">
                 <table class="table">
                     <thead>
                       <tr>

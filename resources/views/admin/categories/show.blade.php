@@ -22,6 +22,11 @@
                                 </li>
                             @endforelse
                         </ul>
+                        <div class="pt-4">
+                            <a href="{{route('admin.categories.index')}}">
+                                <i class="fa-solid fa-chevron-left text-primary" style="font-size: 2.5rem"></i>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
